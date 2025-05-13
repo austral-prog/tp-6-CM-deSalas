@@ -28,5 +28,11 @@ def check_lists(list_to_compare1, list_to_compare2):
     return answer
 
 def list_of_lists(list_of_lists_to_modify):
-    lista_nueva == [list_of_lists_to_modify [0] [:2], list_of_lists_to_modify [1] [1:4], list_of_lists_to_modify [2] [-2]]
-    return lista_nueva
+    result = []
+    if len(list_of_lists_to_modify) > 0:
+        result.append(list_of_lists_to_modify[0][:2])
+    if len(list_of_lists_to_modify) > 1:
+        result.append(list_of_lists_to_modify[1][1:4])
+    if len(list_of_lists_to_modify) > 2:
+        result.append(list_of_lists_to_modify[2][-2:])
+    return result
